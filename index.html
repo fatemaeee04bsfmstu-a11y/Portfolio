@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fatema Akter | Personal Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0b1120;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111c33;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Home Section */
+
+        .home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 10%;
+            gap: 40px;
+        }
+
+        .home-content {
+            max-width: 650px;
+        }
+
+        .home-content h3 {
+            color: #38bdf8;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 span {
+            color: #38bdf8;
+        }
+
+        .home-content h2 {
+            font-size: 23px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #0b1120;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .profile {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            border: 5px solid #38bdf8;
+            object-fit: cover;
+            background: #1e293b;
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            color: #38bdf8;
+            margin-bottom: 45px;
+        }
+
+        /* About */
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .academic-info {
+            margin-top: 30px;
+            background: #17243a;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .academic-info p {
+            margin: 8px 0;
+        }
+
+        .academic-info strong {
+            color: #38bdf8;
+        }
+
+        /* Research Interests */
+
+        .research-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .research-card {
+            background: #17243a;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #263953;
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .research-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .research-card p {
+            color: #cbd5e1;
+        }
+
+        /* Skills */
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            background: #17243a;
+            border: 1px solid #263953;
+            padding: 22px;
+            width: 190px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+        }
+
+        /* Projects */
+
+        .project-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #17243a;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #263953;
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin: 15px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111c33;
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+
+        @media(max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-content h1 {
+                font-size: 36px;
+            }
+
+            .profile {
+                width: 210px;
+                height: 210px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <div class="logo">Fatema.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Home Section -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3>Hello, Welcome to My Portfolio!</h3>
+
+            <h1>I'm <span>Fatema Akter</span></h1>
+
+            <h2>EEE Student | Aspiring Researcher</h2>
+
+            <p>
+                I am an Electrical and Electronic Engineering
+                student passionate about semiconductor materials,
+                computational research, and advanced technologies.
+
+                I am exploring Density Functional Theory (DFT)
+                and computational materials science to understand
+                the physical properties of materials.
+            </p>
+
+            <a href="#about" class="btn">
+                Discover More
+            </a>
+
+        </div>
+
+
+        <!-- Add your own photo as profile.jpg -->
+
+        <img src="profile.jpg"
+             alt="Fatema Akter"
+             class="profile">
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am Fatema Akter, an enthusiastic Electrical
+                and Electronic Engineering student at Jamalpur
+                Science and Technology University.
+
+                My academic interests focus on semiconductor
+                materials, computational materials science,
+                and electronic properties of advanced materials.
+
+                I am continuously developing my programming,
+                simulation, and research skills to build a
+                strong foundation in scientific research.
+            </p>
+
+
+            <div class="academic-info">
+
+                <p>
+                    <strong>Name:</strong>
+                    Fatema Akter
+                </p>
+
+                <p>
+                    <strong>University:</strong>
+                    Jamalpur Science and Technology University
+                </p>
+
+                <p>
+                    <strong>Department:</strong>
+                    Electrical and Electronic Engineering
+                </p>
+
+                <p>
+                    <strong>Academic Level:</strong>
+                    4th Year
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    fatemaeee04bsfmstu@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Research Interests -->
+
+    <section id="research">
+
+        <h2 class="section-title">
+            Research Interests
+        </h2>
+
+        <div class="research-container">
+
+            <div class="research-card">
+
+                <h3>Density Functional Theory</h3>
+
+                <p>
+                    Exploring the electronic structure
+                    and physical properties of materials
+                    using first-principles calculations.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>Semiconductor Materials</h3>
+
+                <p>
+                    Studying the electronic and optical
+                    properties of semiconductor materials
+                    for advanced applications.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>Computational Materials Science</h3>
+
+                <p>
+                    Using computational techniques
+                    to investigate material properties
+                    and scientific problems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>MATLAB</h3>
+                <p>Engineering Simulation</p>
+            </div>
+
+            <div class="skill">
+                <h3>Quantum ESPRESSO</h3>
+                <p>DFT Calculations</p>
+            </div>
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Development</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Projects & Research
+        </h2>
+
+        <div class="project-container">
+
+            <div class="project">
+
+                <h3>Computational Materials Research</h3>
+
+                <p>
+                    Exploring semiconductor materials
+                    through Density Functional Theory
+                    using Quantum ESPRESSO.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Python Programming</h3>
+
+                <p>
+                    Learning Python for numerical
+                    calculations, scientific computing,
+                    and engineering applications.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Electrical Engineering Projects</h3>
+
+                <p>
+                    Developing academic knowledge
+                    through electronic circuits,
+                    simulation, and practical projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            Get In Touch
+        </h2>
+
+        <p>
+            Interested in research, collaboration,
+            or academic discussions?
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:fatemaeee04bsfmstu@gmail.com">
+                fatemaeee04bsfmstu@gmail.com
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Fatema Akter.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed with passion for Engineering and Research.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
