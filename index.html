@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Fatema Akter | EEE Portfolio</title>
 
 <style>
@@ -120,11 +119,11 @@ section {
     transform: translateY(-3px);
 }
 
-/* PROFILE PHOTO */
+/* PASSPORT-STYLE PROFILE PHOTO */
 .profile-card {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 240px;
+    height: 320px;
+    border-radius: 12px;
     padding: 7px;
     background: linear-gradient(135deg, #38bdf8, #6366f1);
     box-shadow: 0 0 35px rgba(56,189,248,0.2);
@@ -134,9 +133,10 @@ section {
 .profile-card img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 8px;
     object-fit: cover;
-    border: 5px solid #0f172a;
+    object-position: center;
+    border: 4px solid #0f172a;
 }
 
 /* ABOUT */
@@ -150,6 +150,49 @@ section {
     text-align: center;
     color: #cbd5e1;
     font-size: 17px;
+}
+
+/* EDUCATION */
+#education {
+    background: #0f172a;
+}
+
+.education-container {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.education-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    border-left: 4px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.education-card h3 {
+    color: #38bdf8;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.education-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+.education-card strong {
+    color: #e2e8f0;
 }
 
 /* RESEARCH INTERESTS */
@@ -353,8 +396,8 @@ footer {
     }
 
     .profile-card {
-        width: 230px;
-        height: 230px;
+        width: 210px;
+        height: 280px;
     }
 }
 
@@ -370,6 +413,10 @@ footer {
     .project-grid {
         grid-template-columns: 1fr;
     }
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -383,6 +430,7 @@ footer {
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#research">Research</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -402,10 +450,13 @@ footer {
         <h3>Electrical and Electronic Engineering Student</h3>
 
         <p>
-            I am an EEE student interested in semiconductor
-            materials and computational research. I enjoy
-            exploring electronics, programming, and
-            research-oriented engineering projects.
+            I am a fourth-year undergraduate student of Electrical
+            and Electronic Engineering at Jamalpur Science and
+            Technology University. My interests include
+            semiconductor materials, Density Functional Theory (DFT),
+            and computational materials science. I am interested in
+            applying computational tools and engineering knowledge
+            to explore material properties and research problems.
         </p>
 
         <a href="#contact" class="btn">Contact Me</a>
@@ -425,16 +476,100 @@ footer {
     <div class="about-content">
         <p>
             I am an Electrical and Electronic Engineering student
-            at Jamalpur Science and Technology University.
+            at Jamalpur Science and Technology University, currently
+            pursuing my undergraduate degree in the 2022–2023
+            academic session.
 
-            Currently, I am in my 4th year of undergraduate study.
-            My academic interests include semiconductor materials,
-            computational materials science, electronics, and
-            renewable energy systems.
+            My academic interests include Density Functional Theory
+            (DFT), semiconductor materials, computational materials
+            science, electronics, and renewable energy systems.
 
-            I am developing my knowledge of programming,
-            simulation tools, and engineering research.
+            I have experience with Python, MATLAB, Quantum ESPRESSO,
+            and HTML. I am developing my knowledge of computational
+            simulations, material-property analysis, and
+            engineering research.
         </p>
+    </div>
+
+</section>
+
+<!-- EDUCATION SECTION -->
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-container">
+
+        <!-- BSc -->
+        <div class="education-card">
+            <h3>Bachelor of Science (BSc)</h3>
+
+            <p>
+                <strong>Department:</strong>
+                Electrical and Electronic Engineering (EEE)
+            </p>
+
+            <p>
+                <strong>University:</strong>
+                Jamalpur Science and Technology University
+            </p>
+
+            <p>
+                <strong>Academic Session:</strong>
+                2022–2023
+            </p>
+
+            <p>
+                <strong>Expected Graduation:</strong>
+                2027
+            </p>
+
+            <p>
+                <strong>Current Status:</strong>
+                4th Year Undergraduate Student
+            </p>
+        </div>
+
+        <!-- HSC -->
+        <div class="education-card">
+            <h3>Higher Secondary Certificate (HSC)</h3>
+
+            <p>
+                <strong>Institution:</strong>
+                Govt. Ashek Mahmud College, Jamalpur
+            </p>
+
+            <p>
+                <strong>Passing Year:</strong>
+                2022
+            </p>
+
+            <p>
+                <strong>GPA:</strong>
+                5.00
+            </p>
+        </div>
+
+        <!-- SSC -->
+        <div class="education-card">
+            <h3>Secondary School Certificate (SSC)</h3>
+
+            <p>
+                <strong>Institution:</strong>
+                Ayubpur Captain A.B Tajul Islam High School
+            </p>
+
+            <p>
+                <strong>Passing Year:</strong>
+                2020
+            </p>
+
+            <p>
+                <strong>GPA:</strong>
+                5.00
+            </p>
+        </div>
+
     </div>
 
 </section>
@@ -617,12 +752,15 @@ footer {
 
     <div class="research-box">
 
-        <h3>Computational Study of Semiconductor Materials Using DFT</h3>
+        <h3>
+            Computational Study of Semiconductor Materials Using DFT
+        </h3>
 
         <p>
-            I am exploring the structural, electronic, and optical
-            properties of semiconductor materials using Density
-            Functional Theory (DFT).
+            I am exploring the structural, electronic, optical,
+            thermodynamic, and strain-dependent properties of
+            semiconductor materials using Density Functional
+            Theory (DFT).
 
             My research learning involves Quantum ESPRESSO,
             Python, and computational analysis of material
